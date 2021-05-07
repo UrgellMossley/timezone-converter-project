@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* Scale variable for use with time-input */
+:root {
+    --scale: scale(1.1)
+}
+
+/* Removes extra padding. Sets 1rem to 10px and establishes font */
+* {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+/* Styles h1 and h3 */
+h1, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+/* background color */
+body{
+    background-color: rgb(144, 241, 181);
+
+}
+/* Layout for document */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    margin: auto;
+    
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+}
+.result-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.timezone-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.result-container{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Swap button */
+.btn {
+    width: 90%;
+    height: 5rem;
+    margin: 1rem 0 0 6.4rem;
+    border-radius: 9%;
+    border: none;
+    font-size: 2rem;
+}
+
+.btn:focus{
+    transform: var(--scale);
+}
+
+.timezone-result{
+    justify-self: flex-end;
+}
+
+/* Capatilises user input */
+.timezone-input{
+    font-size: 2rem;
+    width: 7rem;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5%;
+    border: none;
+}
+
+.timezone-input:focus{
+    outline: none;
+}
+
+.timezone-input:nth-child(1){
+    margin-bottom: 0.4rem;
+}
+/* Prevents Placeholder Capatalisation */
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    text-transform: none;
+    font-size: 0.7rem;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    text-transform: none;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    text-transform: none;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    text-transform: none;
+}
+::placeholder { /* Recent browsers */
+    text-transform: none;
+}
+
+.timezone-result {
+    width: 100%;
+    margin-left: 4rem;
+    margin-top: 1.9rem;
+    text-align: center;
+    font-size: 2.5rem;
+
+}
+/* Time Input Styling. Selecting the components of the element and styling acordingly.
+Applying a scale effect to each selector for UI purposes */
+input[type=time] {
+    border: none;
+    color: #2a2c2d;
+    font-size: 3rem;
+    font-family: inherit;
+    width: 40rem;
+    background-color: rgb(144, 241, 181);
+  }
+/* Removing outlines when clicked for aesthetics */
+  input[type=time]:focus{
+      outline: none;
+  }
+  input[type=time]::-webkit-datetime-edit-fields-wrapper:focus{
+      outline: none;
+  }
+  /* Use flex to position the fields within the container */
+  input[type=time]::-webkit-datetime-edit-fields-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  /* sets the distance between each field */
+  input[type=time]::-webkit-datetime-edit-text {
+    padding: 2rem 0.6rem;
+    margin-top: 1.2rem;
+  }
+  /* Hour */
+  input[type=time]::-webkit-datetime-edit-hour-field {
+    border-radius: 12%;
+    padding: 3.6rem 3rem;
+    background-color: rgb(212, 211, 211);
+  }
+  input[type=time]::-webkit-datetime-edit-hour-field:focus{
+    transform: var(--scale);
+}
+
+  /* Minute */
+  input[type=time]::-webkit-datetime-edit-minute-field {
+    border-radius: 12%;
+    padding: 3.6rem 3rem;
+    background-color: rgb(212, 211, 211);
+  }
+
+  input[type=time]::-webkit-datetime-edit-minute-field:focus{
+    transform: var(--scale);
+  }
+ /* AM/PM */
+input[type=time]::-webkit-datetime-edit-ampm-field {
+    background-color: #3cb66b;
+    border-radius: 12%;
+    color: #fff;
+    padding: 3.6rem 3rem;
+  } 
+  input[type=time]::-webkit-datetime-edit-ampm-field:focus{
+    transform: var(--scale);
+  }
+  
+/* 'X' button for resetting/clearing time */
+input[type=time]::-webkit-clear-button {
+    display: none;
+  }
+  
+/* Up/Down arrows for incrementing/decrementing the value */
+input[type=time]::-webkit-inner-spin-button {
+    display: none;
+  }
+
+/* Hides weird clock icon which is just unneccesary on desktops */
+  input[type="time"]::-webkit-calendar-picker-indicator {
+display: none; }
+ 

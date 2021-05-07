@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Timezone Converter Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>Timezone Converter</h1>
+            <h3>Enter your time, timezone, and desired timezone-we'll do the rest!</h3>
+        <div class="container">
+           
+            <!-- <form class="time-form"> -->
+              <div class="input-container">
+               
+                  <div>
+                      <input class="time-input"type="time"> 
+                  </div>
+                
+                  <div class="timezone-container">
+                      <input class="timezone-input from-timezone" type="text" value="CEST">
+                      <input type="text" class="timezone-input to-timezone" value="" placeholder="Desired Timezone">
+                  </div>
+
+                
+               </div>
+        
+              <div class="result-container">   
+                  <button type="submit"class="swap btn">Convert!</button>
+                  <h3 class="timezone-result">Go!</h3>
+              </div>
+        
+            <!-- </form> -->
+        <script src="scripts.js" async defer></script>
+    </body>
+</html>
